@@ -21,5 +21,5 @@ To start a project at [http://localhost:3000](http://localhost:3000).
 
 `npm test`
 
-Launches the test runner in the interactive watch mode.
+To launch tests.
 
