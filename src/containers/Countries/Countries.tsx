@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import CountriesService from 'services';
-import { Country } from './types';
-import Header from 'components/Header';
-import CountriesList from 'components/CountriesList';
+import { Country } from '../../util/types';
 import ErrorPage from 'components/ErrorPage';
 import Loading from 'components/Loading';
+import CountriesTable from './CountriesTable/CountriesTable';
 
 const Countries = () => {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -34,12 +33,7 @@ const Countries = () => {
   } else if (!isLoaded) {
     return <Loading />;
   } else {
-    return (
-      <div>
-        <Header />
-        <CountriesList countries={countries}></CountriesList>
-      </div>
-    );
+    return <CountriesTable countries={countries} />;
   }
 }
   

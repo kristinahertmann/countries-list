@@ -5,24 +5,24 @@ import {
   useMaterialReactTable,
   type MRT_ColumnDef,
 } from 'material-react-table';
-import { Country } from 'containers/Countries/types';
-import { tableColumns, tableDesignOptions } from 'components/util';
+import { tableColumns, tableDesignOptions } from './util';
+import { Country } from '../../util/types';
 
 const CountriesList = (props: any) => {
   const listOfCountries: Country[] = props.countries;
 
-  const columns = useMemo<MRT_ColumnDef<Country>[]>(
+  const countryTableColumns = useMemo<MRT_ColumnDef<Country>[]>(
     () => tableColumns as MRT_ColumnDef<Country>[],
     [],
   );
 
-  const table = useMaterialReactTable({
-    columns,
+  const countryTable = useMaterialReactTable({
+    columns: countryTableColumns,
     data: listOfCountries,
     ...tableDesignOptions,
   });
 
-  return <div className='table-container'><MaterialReactTable table={table} /></div>;
+  return <div className='table-container'><MaterialReactTable table={countryTable} /></div>;
 };
 
 export default CountriesList;
