@@ -1,6 +1,6 @@
-import { Country } from '../../../util/types';
 import Header from 'components/Header';
 import CountriesList from 'components/CountriesList';
+import { Country } from 'util/Types';
 
 const CountriesTable = (props: any) => {
     const countries: Country[] = props.countries;

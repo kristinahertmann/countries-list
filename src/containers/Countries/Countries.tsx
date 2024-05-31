@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import CountriesService from 'services';
-import { Country } from '../../util/types';
 import ErrorPage from 'components/ErrorPage';
 import Loading from 'components/Loading';
 import CountriesTable from './CountriesTable/CountriesTable';
+import { Country } from 'util/Types';
 
 const Countries = () => {
   const [countries, setCountries] = useState<Country[]>([]);

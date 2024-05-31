@@ -5,8 +5,8 @@ import {
   useMaterialReactTable,
   type MRT_ColumnDef,
 } from 'material-react-table';
-import { tableColumns, tableDesignOptions } from './util';
-import { Country } from '../../util/types';
+import { tableColumns, tableDesignOptions } from './TableHelper';
+import { Country } from 'util/Types';
 
 const CountriesList = (props: any) => {
   const listOfCountries: Country[] = props.countries;
