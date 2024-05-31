@@ -2,7 +2,7 @@
 # Hub88 Frontend Developer Challenge
 ### **Task:** 
 
-Create a table with countries what you can filter by country code.
+Created a table with countries that can be filtered by their unique country code.
 
 ### **Used resourches:**
 
